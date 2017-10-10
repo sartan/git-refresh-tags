@@ -34,7 +34,7 @@ git log --pretty=oneline --abbrev-commit --full-history | while read line; do
   matched_tags=($(function_find_tag "${commit_message}"))
 
   for matched_tag in ${matched_tags[@]} ; do
-    echo "git tag $sha $matched_tag"
+    echo "git tag $matched_tag $sha"
   done
 done
 
